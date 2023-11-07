@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: pharma-supplier-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/smartpharmadb?searchpath=dms_schema
+    username: postgres
+    password: panchakshari
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect  
+    
+server:
+  port: 8080
+  servlet:
+    context-path: /pharma/supplier
+
+springdoc:
+  api-docs:
+    path: /pharma/supplier/swagger-ui.html
